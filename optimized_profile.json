@@ -1,0 +1,21 @@
+{
+  "profile": {
+    "id": "params",
+    "title": "+ параметры: temperature 0, seed, top_k/top_p, окно 6144, лимит 600",
+    "model": "qwen2.5:7b",
+    "prompt": "v1",
+    "format": "json",
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "top_k": 20,
+      "top_p": 0.8,
+      "repeat_penalty": 1.05,
+      "num_ctx": 6144,
+      "num_predict": 600
+    }
+  },
+  "why": "индекс качества 0.710 в пределах 0.02 от лучшего (0.721), но быстрее/легче; среди близких по качеству (params, baseline) — самый быстрый",
+  "model_name": "advent-rag",
+  "created": "2026-10-09T21:16:34"
+}

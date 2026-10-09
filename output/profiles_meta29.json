@@ -1,0 +1,72 @@
+{
+  "baseline": {
+    "cold_load_sec": 5.2,
+    "file_gb": 4.36,
+    "quant": "Q4_K_M",
+    "params": "7.6B",
+    "mem_gb": 4.78,
+    "vram_gb": 4.78,
+    "gpu_share": 1.0,
+    "context_length": 8192
+  },
+  "params": {
+    "cold_load_sec": 5.21,
+    "file_gb": 4.36,
+    "quant": "Q4_K_M",
+    "params": "7.6B",
+    "mem_gb": 4.67,
+    "vram_gb": 4.67,
+    "gpu_share": 1.0,
+    "context_length": 6144
+  },
+  "prompt": {
+    "cold_load_sec": 6.63,
+    "file_gb": 4.36,
+    "quant": "Q4_K_M",
+    "params": "7.6B",
+    "mem_gb": 4.67,
+    "vram_gb": 4.67,
+    "gpu_share": 1.0,
+    "context_length": 6144
+  },
+  "q8_0": {
+    "cold_load_sec": 12.02,
+    "file_gb": 7.54,
+    "quant": "Q8_0",
+    "params": "7.6B",
+    "mem_gb": 7.6,
+    "vram_gb": 7.6,
+    "gpu_share": 1.0,
+    "context_length": 6144
+  },
+  "q3_K_M": {
+    "cold_load_sec": 6.13,
+    "file_gb": 3.55,
+    "quant": "Q3_K_M",
+    "params": "7.6B",
+    "mem_gb": 3.92,
+    "vram_gb": 3.92,
+    "gpu_share": 1.0,
+    "context_length": 6144
+  },
+  "ctx4096": {
+    "cold_load_sec": 6.66,
+    "file_gb": 4.36,
+    "quant": "Q4_K_M",
+    "params": "7.6B",
+    "mem_gb": 4.42,
+    "vram_gb": 4.42,
+    "gpu_share": 1.0,
+    "context_length": 4096
+  },
+  "final": {
+    "cold_load_sec": 4.98,
+    "file_gb": 4.36,
+    "quant": "Q4_K_M",
+    "params": "7.6B",
+    "mem_gb": 4.67,
+    "vram_gb": 4.67,
+    "gpu_share": 1.0,
+    "context_length": 6144
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "thresholds": {
+    "ollama": {
+      "min_score": 0.437,
+      "rel_ratio": 0.3,
+      "answer_min": 0.521
+    }
+  }
+}

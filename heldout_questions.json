@@ -1,0 +1,30 @@
+{
+  "description": "Новые контрольные вопросы (день 29), которые НЕ использовались ни при калибровке порогов, ни при написании промпта v2. Нужны, чтобы проверить, что оптимизация не подогнана под основной набор eval_questions.json. Формат тот же.",
+  "questions": [
+    {"id": 101, "type": "project", "q": "Какие команды доступны внутри интерактивного чата в проекте дня 9?",
+     "expected": "/stats, /summary, /exit.", "must": [["/stats"], ["/summary"], ["/exit"]],
+     "sources": ["day9-context-compression/"]},
+    {"id": 102, "type": "project", "q": "Какие параметры принимает инструмент get_client_orders в MCP-сервере дня 17?",
+     "expected": "client_id (обязательный) и status (new / in_progress / done / cancelled, необязательный).",
+     "must": [["client_id"], ["status"]], "sources": ["day17-mcp-tool/"]},
+    {"id": 103, "type": "project", "q": "Какие инструменты есть в локальном MCP-сервере local_server.py из проекта дня 16?",
+     "expected": "add, echo, current_time.", "must": [["add"], ["echo"], ["current_time"]],
+     "sources": ["day16-mcp-connect/"]},
+    {"id": 104, "type": "project", "q": "Какие три инструмента по очереди вызывает пайплайн в проекте дня 19?",
+     "expected": "search → summarize → save_to_file.", "must": [["search"], ["summarize"], ["save_to_file"]],
+     "sources": ["day19-mcp-pipeline/"]},
+    {"id": 105, "type": "project", "q": "Какие MCP-серверы подключает оркестратор в проекте дня 20?",
+     "expected": "Четыре сервера: crm, kb, tasks, files.", "must": [["crm"], ["kb"], ["tasks"], ["files"]],
+     "sources": ["day20-mcp-orchestration/"]},
+    {"id": 106, "type": "project", "q": "Какие параметры ContextManager определяют, когда и что сжимается, в проекте дня 9?",
+     "expected": "keep_last_n — сколько последних сообщений хранить как есть; summarize_every — как часто сворачивать старые в summary.",
+     "must": [["keep_last_n"], ["summarize_every"]], "sources": ["day9-context-compression/"]},
+    {"id": 107, "type": "project", "q": "Сколько документов было в корпусе проекта дня 21?",
+     "expected": "43 документа (10 README/отчётов и 33 файла кода).", "must": [["43"]],
+     "sources": ["day21-doc-index/"]},
+    {"id": 108, "type": "absent", "q": "Какой токен Telegram-бота используется в пайплайне дня 19?",
+     "expected": "В базе этого нет — правильный ответ «не знаю».", "must": [], "sources": []},
+    {"id": 109, "type": "vague", "q": "А как это настроить?",
+     "expected": "Расплывчатый вопрос — правильно попросить уточнение.", "must": [], "sources": []}
+  ]
+}

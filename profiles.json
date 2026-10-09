@@ -1,0 +1,33 @@
+{
+  "description": "Профили локальной модели для сравнения. baseline — как в дне 28 (до оптимизации). Каждый следующий меняет одну группу настроек, чтобы был виден вклад каждой. Можно добавлять свои профили. selectable: false — профиль только для сравнения, в итог не выбирается.",
+  "profiles": [
+    {"id": "baseline", "title": "До оптимизации (настройки дня 28)",
+     "model": "qwen2.5:7b", "prompt": "v1", "format": "json",
+     "options": {"temperature": 0.2, "num_ctx": 8192, "num_predict": 900}},
+
+    {"id": "params", "title": "+ параметры: temperature 0, seed, top_k/top_p, окно 6144, лимит 600",
+     "model": "qwen2.5:7b", "prompt": "v1", "format": "json",
+     "options": {"temperature": 0, "seed": 42, "top_k": 20, "top_p": 0.8, "repeat_penalty": 1.05,
+                 "num_ctx": 6144, "num_predict": 600}},
+
+    {"id": "prompt", "title": "+ промпт под задачу (v2) и JSON-схема",
+     "model": "qwen2.5:7b", "prompt": "v2", "format": "schema",
+     "options": {"temperature": 0, "seed": 42, "top_k": 20, "top_p": 0.8, "repeat_penalty": 1.05,
+                 "num_ctx": 6144, "num_predict": 600}},
+
+    {"id": "q8_0", "title": "+ квантование Q8_0 (точнее, больше памяти)",
+     "model": "qwen2.5:7b-instruct-q8_0", "prompt": "v2", "format": "schema",
+     "options": {"temperature": 0, "seed": 42, "top_k": 20, "top_p": 0.8, "repeat_penalty": 1.05,
+                 "num_ctx": 6144, "num_predict": 600}},
+
+    {"id": "q3_K_M", "title": "+ квантование Q3_K_M (меньше памяти, быстрее)",
+     "model": "qwen2.5:7b-instruct-q3_K_M", "prompt": "v2", "format": "schema",
+     "options": {"temperature": 0, "seed": 42, "top_k": 20, "top_p": 0.8, "repeat_penalty": 1.05,
+                 "num_ctx": 6144, "num_predict": 600}},
+
+    {"id": "ctx4096", "title": "Проверка нижней границы окна: num_ctx 4096", "selectable": false,
+     "model": "qwen2.5:7b", "prompt": "v2", "format": "schema",
+     "options": {"temperature": 0, "seed": 42, "top_k": 20, "top_p": 0.8, "repeat_penalty": 1.05,
+                 "num_ctx": 4096, "num_predict": 600}}
+  ]
+}
